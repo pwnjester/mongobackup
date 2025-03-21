@@ -1,0 +1,8 @@
+version: "3"
+services:
+  mongodump:
+    # build: .
+    image: malwarepad/mongodb-s3-backupper
+    volumes:
+      - ./key.asc:/app/key.asc
+    env_file: .env
